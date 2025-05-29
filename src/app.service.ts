@@ -33,10 +33,10 @@ async getJobs(filters: JobFiltersDto): Promise<Job[]> {
   if (jobType) {
     where.job_type = ILike(jobType);;
   }
-  if (minSalary && maxSalary) {
+  // if (minSalary && maxSalary) {
     console.log(minSalary,maxSalary)
     where.salary_range = Between(minSalary,maxSalary);
-  }
+  // }
 
   return this.jobRepository.find({ where });
 }

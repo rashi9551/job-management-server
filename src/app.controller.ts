@@ -36,8 +36,8 @@ export class AppController {
       searchQuery: query.searchQuery,
       location: query.location,
       jobType: query.jobType,
-      minSalary: query.minSalary ? query.minSalary * 1000 : undefined,
-      maxSalary: query.maxSalary ? (query.maxSalary * 12000 ): undefined,
+      minSalary: query.minSalary ? query.minSalary * 12000 : undefined,
+      maxSalary: query.maxSalary ? query.maxSalary * 12000 : undefined,
     };
     console.log('Filters:', filters);
     return this.appService.getJobs(filters);
